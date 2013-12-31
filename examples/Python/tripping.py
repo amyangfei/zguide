@@ -90,8 +90,8 @@ def main():
     broker_thread = threading.Thread(target=broker_task)
     broker_thread.daemon=True
 
-    worker_thread.start()
     broker_thread.start()
+    worker_thread.start()
     client_thread.start()
 
     # Wait for signal on client pipe
